@@ -1,20 +1,22 @@
 class Project {
   final String? title, description;
+  final Uri? url;
 
-  Project({this.title, this.description});
+  Project({this.title, this.description, this.url});
 }
-
 
 List<Project> demoprojects = [
   Project(
-    title: "Responsive Admin Panel or Dashboard - Flutter UI",
+    title: "Responsive Painel De Control ou Dashboard - Flutter UI",
     description:
-        "On Flutter V2.* web officially supported on a stable branch. Today I share an Admin panel or you can call it dashboard UI build with flutter. Now you can build your app dashboard using flutter. This dashboard contains almost everything that you need like a chart, table, nice small card for showing info.",
+        "On Flutter V2.* web oficialmente suportado em um ramo estável. Hoje, compartilho um painel de administração ou você pode chamá-lo de painel de criação de interface do usuário com vibração. Agora você pode criar o painel do seu aplicativo usando o flutter. Este painel contém quase tudo o que você precisa, como um gráfico, uma tabela e um pequeno cartão para mostrar informações.",
+        url:  Uri.parse('http://www.iotech-development.com/'),
   ),
   Project(
-    title: "E-Commerce Complate App - Flutter UI",
+    title: "Hidrotec - Flutter UI e Swift UI",
     description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+        "Aplicativo para controlar a piscina , ligar as luces de leds , ligar a bomba , permite controlar a temperatura da agua atraves uma interfaz inteligente, consige programar eventos diarios e semanales.",
+    url: Uri.parse('http://www.iotech-development.com/hidro.html'),
   ),
   Project(
     title: "Outlook Email App Redesign - Flutter Fully Responsive Design UI",

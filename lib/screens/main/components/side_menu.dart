@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_svg/svg.dart';
 
@@ -71,16 +72,32 @@ class SideMenu extends StatelessWidget {
                         children: [
                           const Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              _launchUr1(
+                                Uri.parse(
+                                    'https://www.linkedin.com/in/alejandro-heredia-3b6085245/'),
+                              );
+                            },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/github.svg"),
+                            onPressed: () {
+                              _launchUr1(
+                                Uri.parse(
+                                    'https://www.instagram.com/alejandro.heredia.144/'),
+                              );
+                            },
+                            icon: SvgPicture.asset(
+                                "assets/icons/instagram-icon.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/twitter.svg"),
+                            onPressed: () {
+                              _launchUr1(
+                                Uri.parse(
+                                    'https://wa.me/message/LAFIIDW2QQZOP1'),
+                              );
+                            },
+                            icon: SvgPicture.asset("assets/icons/whats.svg"),
                           ),
                           const Spacer(),
                         ],
@@ -94,5 +111,11 @@ class SideMenu extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _launchUr1(Uri url) async {
+    if (!await launchUrl(url)) {
+      throw Exception('Could not launch $url');
+    }
   }
 }

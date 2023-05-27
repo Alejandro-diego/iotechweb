@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../models/Project.dart';
 import '../../../responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
@@ -34,14 +35,22 @@ class ProjectCard extends StatelessWidget {
           ),
           const Spacer(),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              _launchUr1();
+            },
             child: const Text(
-              "Read More >>",
+              "Saber Mais >>",
               style: TextStyle(color: primaryColor),
             ),
           ),
         ],
       ),
     );
+  }
+
+  Future<void> _launchUr1() async {
+    if (!await launchUrl(project.url!)) {
+      throw Exception('Could not launch ${project.url!}');
+    }
   }
 }
