@@ -4,6 +4,8 @@ import '../../../models/Project.dart';
 import '../../../responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../preset_img/prensentatios.dart';
+
 class ProjectCard extends StatelessWidget {
   const ProjectCard({
     Key? key,
@@ -34,23 +36,57 @@ class ProjectCard extends StatelessWidget {
             style: const TextStyle(height: 1.5),
           ),
           const Spacer(),
-          TextButton(
-            onPressed: () {
-              _launchUr1();
-            },
-            child: const Text(
-              "Saber Mais >>",
-              style: TextStyle(color: primaryColor),
-            ),
+          Row(
+            children: [
+              Hero(
+                tag: project.refTag!,
+                child: Container(
+                  width: 100.00,
+                  height: 100.00,
+                  decoration: new BoxDecoration(
+                    image: new DecorationImage(
+                      image: ExactAssetImage(project.imageAsstes!),
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                     _detailsPage(context);
+               
+                },
+                child: const Text(
+                  "Saber Mais >>",
+                  style: TextStyle(color: primaryColor),
+                ),
+              ),
+            ],
           ),
         ],
       ),
     );
   }
 
-  Future<void> _launchUr1() async {
-    if (!await launchUrl(project.url!)) {
-      throw Exception('Could not launch ${project.url!}');
-    }
+  void _detailsPage(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
+      return Scaffold(
+        body: Center(
+          child: Hero(
+            tag: project.refTag!,
+            child: Container(
+              width: 300.00,
+              height: 600.00,
+              decoration: new BoxDecoration(
+                image: new DecorationImage(
+                  image: ExactAssetImage(project.imageAsstes!),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
+        ),
+      );
+    }));
   }
 }

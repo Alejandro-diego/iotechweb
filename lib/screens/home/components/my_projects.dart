@@ -22,7 +22,7 @@ class MyProjects extends StatelessWidget {
         const Responsive(
           mobile: ProjectsGridView(
             crossAxisCount: 1,
-            childAspectRatio: 1.7,
+            childAspectRatio: 1.5,
           ),
           mobileLarge: ProjectsGridView(crossAxisCount: 2),
           tablet: ProjectsGridView(childAspectRatio: 1.1),
@@ -37,7 +37,7 @@ class ProjectsGridView extends StatelessWidget {
   const ProjectsGridView({
     Key? key,
     this.crossAxisCount = 3,
-    this.childAspectRatio = 1.3,
+    this.childAspectRatio = 1.2,
   }) : super(key: key);
 
   final int crossAxisCount;
@@ -51,7 +51,7 @@ class ProjectsGridView extends StatelessWidget {
       itemCount: demoprojects.length,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: crossAxisCount,
-        childAspectRatio: childAspectRatio,
+        childAspectRatio:  childAspectRatio,
         crossAxisSpacing: defaultPadding,
         mainAxisSpacing: defaultPadding,
       ),
