@@ -1,11 +1,11 @@
 {
-    "name": "iotechweb",
-    "short_name": "iotechweb",
+    "name": "AlejandroHeredia",
+    "short_name": "AlejandroHeredia",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Portfolio of Alejandro.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
