@@ -19,9 +19,10 @@ List<Project> demoprojects = [
     url: Uri.parse('http://www.iotech-development.com/hidro.html'),
   ),
   Project(
-    title: "Outlook Email App Redesign - Flutter Fully Responsive Design UI",
+    title: "Temp Control - Flutter  Responsive Design UI e SwiftIU",
     description:
-        "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
+        "Aplicativo para aquisição de dados e controle de câmaras frigoríficas, temperatura, consumo de pressão de refrigerante.",
+        url: Uri.parse('http://www.iotech-development.com/temp.html'),
   ),
   Project(
     title: "Chat/Messaging App Light and Dark Theme - Flutter UI",
