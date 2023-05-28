@@ -53,7 +53,11 @@ class ProjectCard extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                     _detailsPage(context);
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) =>  PresetantionImg(assetsImg: project.imageAsstes!, refTag: project.refTag!,),
+                    ),
+                  );
                
                 },
                 child: const Text(
