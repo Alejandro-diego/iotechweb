@@ -39,6 +39,8 @@ dependencies:
   flutter_svg: ^2.0.6
   animated_text_kit: ^4.2.2
   url_launcher: ^6.1.11
+  syncfusion_flutter_pdf: ^21.2.6
+  intl: ^0.18.1
 
 dev_dependencies:
   change_app_package_name: ^1.0.0

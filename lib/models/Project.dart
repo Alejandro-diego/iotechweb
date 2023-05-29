@@ -33,21 +33,21 @@ List<Project> demoprojects = [
   Project(
     title: "Stock Control Light e Dark Theme - Flutter UI",
     description:
-        "that contains an image with a tag line also has a skip button.",
+        "Aplicativo para para o controle de stock , fazer orcamentos e conpartilhar  por whatasApp ou qualque rede social.",
         refTag: 'stock',
         imageAsstes: 'assets/images/stock.png'
   ),
   Project(
-    title: "Welcome page, Login Page and Sign up page - Flutter UI",
+    title: "SpaLink, - Flutter UI e Swift UI ",
     description:
-        "Inisode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+        "Aplicativo para controlar hidromasajem , Luces , temperatura , bolhas , enchimento automatico.",
         refTag: 'spa',
          imageAsstes: 'assets/images/spa.png'
   ),
   Project(
-    title: "Covid-19 App - Flutter UI",
+    title: "ReleControl - Swift UI",
     description:
-        "er. Make mobile, web, and desktop app from a single codebase.",
+        "Direge 4 canais pra automacao , liga luces , bombas ou qualquer qualquer dispositivo que deseja ligar remotamente .",
         refTag: 'rele',
         imageAsstes: 'assets/images/relecontrol.png'
   ),

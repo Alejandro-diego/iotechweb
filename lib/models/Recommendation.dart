@@ -6,27 +6,27 @@ class Recommendation {
 
 final List<Recommendation> demorecommendations = [
   Recommendation(
-    name: "Kolapo Obanewa",
+    name: "Diego Rodrigues",
     source: "Linkedin",
     text:
-        "I have had the pleasure of working with Anwar on two flutter projects and what strikes me the most about his work is his ability to write clean and reusable codes with best practices. He is hardworking and makes it so easy to transcribe ideas into beautiful and testable flutter apps. He is a Flutter/Dart gem and has my highest recommendation",
+        "Tive o prazer de trabalhar com Alejandro em dois projetos flutter e o que mais me impressiona em seu trabalho é sua capacidade de escrever códigos limpos e reutilizáveis ​​com as melhores práticas. Ele é trabalhador e torna muito fácil transcrever ideias em aplicativos bonitos e testáveis. Ele é uma joia do Flutter/Dart e tem minha recomendação mais alta",
   ),
   Recommendation(
-    name: "Reza Shahbazi",
+    name: "Martin Rabazzi",
     source: "Linkedin",
     text:
-        "Abu is great asset for any organization. It's a true pleasure working with him at TakeIn. His flutter skill is amazing as well as his professionalism and being a good team player. Abu's problem solving skill is also one of his great skills.",
+        "Alejandro é um grande trunfo para qualquer empresa. É um verdadeiro prazer trabalhar com ele . Sua habilidade é incrível, assim como seu profissionalismo e ser um bom jogador de equipe. A habilidade de resolução de problemas  também é uma de suas grandes habilidades..",
   ),
   Recommendation(
-    name: "Diadem",
+    name: "Luiz",
     source: "YouTube",
     text:
-        "I like your way you doing your project and you taught us. After I watch this I like and hit the subscribe button and then watch your video playlist one by one!! Within three hours, I learned a lot! I share your channel in my college WhatsApp group!",
+        "Eu gosto do seu jeito de fazer seu projeto e você nos ensinou. Depois de assistir, eu gosto e pressiono o botão de inscrição e assisto à sua lista de reprodução de vídeos, um por um! Em três horas, aprendi muito! Compartilho seu canal no meu grupo de WhatsApp da faculdade!!",
   ),
   Recommendation(
     name: "Roshan Shetty",
     source: "YouTube",
     text:
-        "Very straightforward, professional and also the best flutter videos in the youtube! It will be great if you add some comments to your steps with 0.5 seconds pause before implementing this step. By meaning of steps, I mean not the basic, but structural steps, like 10-20 steps per video. However, thank you very much!",
+        "Muito direto, profissional e também os melhores vídeos de flutter do youtube! Será ótimo se você adicionar alguns comentários às suas etapas com uma pausa de 0,5 segundos antes de implementar esta etapa. Por etapas, não quero dizer as etapas básicas, mas estruturais, como 10 a 20 etapas por vídeo. No entanto, muito obrigado!",
   ),
 ];

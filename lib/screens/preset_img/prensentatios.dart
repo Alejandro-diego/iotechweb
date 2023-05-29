@@ -35,12 +35,12 @@ class _PresetantionImgState extends State<PresetantionImg> {
                 ),
                 
               ),
-              Container( width: 300,
-              height: 600,
-              decoration: BoxDecoration(border: Border.all(color: Colors.white),),),
-              Container( width: 300,
-              height: 600,
-              decoration: BoxDecoration(border: Border.all(color: Colors.white),),),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container( width: 300,
+                height: 600,
+                decoration: BoxDecoration(border: Border.all(color: Colors.white),),),
+              ),
               
             ],
           ),

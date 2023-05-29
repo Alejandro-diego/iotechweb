@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 import '../../../models/Project.dart';
 import '../../../responsive.dart';
-import 'package:url_launcher/url_launcher.dart';
+
 
 import '../../preset_img/prensentatios.dart';
 
@@ -72,25 +72,5 @@ class ProjectCard extends StatelessWidget {
     );
   }
 
-  void _detailsPage(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (ctx) {
-      return Scaffold(
-        body: Center(
-          child: Hero(
-            tag: project.refTag!,
-            child: Container(
-              width: 300.00,
-              height: 600.00,
-              decoration: new BoxDecoration(
-                image: new DecorationImage(
-                  image: ExactAssetImage(project.imageAsstes!),
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-          ),
-        ),
-      );
-    }));
-  }
+  
 }

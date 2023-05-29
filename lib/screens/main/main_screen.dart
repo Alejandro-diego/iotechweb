@@ -15,7 +15,12 @@ class MainScreen extends StatelessWidget {
       // We hide the appbar on desktop
       appBar: Responsive.isDesktop(context)
           ? null
-          : AppBar(
+          : AppBar(title: Row(
+            children: [
+              Icon(Icons.arrow_back),
+              Text('Aperte aqui')
+            ],
+          ),
               backgroundColor: bgColor,
               leading: Builder(
                 builder: (context) => IconButton(
