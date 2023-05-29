@@ -25,12 +25,12 @@ class SideMenu extends StatefulWidget {
 }
 
 class _SideMenuState extends State<SideMenu> {
-
   @override
   void initState() {
     initializeDateFormatting();
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -176,24 +176,68 @@ class _SideMenuState extends State<SideMenu> {
     final PdfFont contentFont = PdfStandardFont(PdfFontFamily.helvetica, 12);
 
     final DateFormat format = DateFormat(DateFormat.YEAR_MONTH_DAY, 'pt_Br');
-    final String invoiceNumber =
-        'Data: ${format.format(DateTime.now())}';
-    final Size contentSize = contentFont.measureString(invoiceNumber);
+    final String data = 'Data: ${format.format(DateTime.now())}';
+    final Size contentSize = contentFont.measureString(data);
     // ignore: leading_newlines_in_multiline_strings
-    const String address = '''Bill To: \r\n\r\nAbraham Swearegin, 
-        \r\n\r\nUnited States, California, San Mateo, 
-        \r\n\r\n9920 BridgePointe Parkway, \r\n\r\n9365550136''';
+    String address =
+        '''Endereço :  \r\nAv. Ângelo Macalos 256 ,Ap 106,\r\nBrasil, Rio Grade do Sul, Espumoso,  \r\nCEP : 99400-000''';
+    String contato =
+        '''Telefone : +55 54 9 96933976 \r\nLinkedIn : alejandro-heredia-3b6085245,\r\nE-mail : alejandro.maxcom@gmail.com,  \r\nPortafolio : https://alejandroheredia.codemagic.app/''';
+    String obejtivo = '''Objetivo de Carreira :
+    Desenvolvedor de software com capacidade comprovada de adaptação tanto em ambientes autoiniciantes quanto colaborativos, mantendo o foco na obtenção de resultados de alta qualidade em prazos rígidos.
+    Ansioso para obter uma posição desafiadora em uma empresa de prestígio como sua firma, que expandirá meu aprendizado e desenvolverá minhas habilidades de desenvolvedor. 
+    
+    ''';
+    String skill = '''Habilidade : 
+    - Dart/Flutter
+    - SwiftUI
+    - C++    
+       ''';
 
-    PdfTextElement(text: invoiceNumber, font: contentFont).draw(
+       String knowledges = '''Conhecimentos : 
+    - Firebase
+    - Iot , Atmega, ESP32, ESP8266
+    - Electronica Digital
+    - DashBoard 
+    - OS Linux  
+    - TCP IpTables
+    - Montagem de Servers
+    - Corel Design
+       ''';
+
+    PdfTextElement(text: data, font: contentFont).draw(
       page: page,
       bounds: Rect.fromLTWH(pageSize.width - (contentSize.width + 30), 120,
           contentSize.width + 30, pageSize.height - 120),
     );
 
     PdfTextElement(text: address, font: contentFont).draw(
-        page: page,
-        bounds: Rect.fromLTWH(
-            30, 120, pageSize.width - (30), pageSize.height - 120))!;
+      page: page,
+      bounds:
+          Rect.fromLTWH(30, 120, pageSize.width - (30), pageSize.height - 120),
+    )!;
+    PdfTextElement(text: contato, font: contentFont).draw(
+      page: page,
+      bounds:
+          Rect.fromLTWH(30, 175, pageSize.width - (30), pageSize.height - 120),
+    )!;
+
+    PdfTextElement(text: obejtivo, font: contentFont).draw(
+      page: page,
+      bounds:
+          Rect.fromLTWH(30, 235, pageSize.width - (30), pageSize.height - 120),
+    )!;
+    PdfTextElement(text: skill, font: contentFont).draw(
+      page: page,
+      bounds:
+          Rect.fromLTWH(30, 335, pageSize.width - (30), pageSize.height - 120),
+    )!;
+    PdfTextElement(text: knowledges, font: contentFont).draw(
+      page: page,
+      bounds:
+          Rect.fromLTWH(30, 400, pageSize.width - (30), pageSize.height - 120),
+    )!;
+
 
     //Generate PDF grid.
 
@@ -204,6 +248,4 @@ class _SideMenuState extends State<SideMenu> {
     //Save and launch the file.
     await saveAndLaunchFile(bytes, 'cv.pdf');
   }
-
-  
 }
