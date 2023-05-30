@@ -60,7 +60,7 @@ class ProjectCard extends StatelessWidget {
                   );
                
                 },
-                child: const Text(
+                child:  Text(
                   "Saber Mais >>",
                   style: TextStyle(color: primaryColor),
                 ),

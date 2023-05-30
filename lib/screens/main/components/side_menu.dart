@@ -1,6 +1,9 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart' show rootBundle;
 
 import 'package:syncfusion_flutter_pdf/pdf.dart';
 import 'package:intl/intl.dart';
@@ -166,11 +169,26 @@ class _SideMenuState extends State<SideMenu> {
       format: PdfStringFormat(lineAlignment: PdfVerticalAlignment.middle),
     );
 
+    page.graphics.drawString(
+      'App Movile Developer',
+      PdfStandardFont(PdfFontFamily.helvetica, 18),
+      brush: PdfBrushes.aqua,
+      bounds: Rect.fromLTWH(100, 23, pageSize.width - 90, 90),
+      format: PdfStringFormat(lineAlignment: PdfVerticalAlignment.middle),
+    );
+
     page.graphics.drawRectangle(
       bounds: Rect.fromLTWH(400, 0, pageSize.width - 400, 90),
       brush: PdfSolidBrush(
         PdfColor(65, 104, 205),
       ),
+    );
+
+    page.graphics.drawImage(
+      PdfBitmap(
+        await _readImage(),
+      ),
+      Rect.fromLTWH(400, 0, 100, 90),
     );
 
     final PdfFont contentFont = PdfStandardFont(PdfFontFamily.helvetica, 12);
@@ -194,7 +212,7 @@ class _SideMenuState extends State<SideMenu> {
     - C++    
        ''';
 
-       String knowledges = '''Conhecimentos : 
+    String knowledges = '''Conhecimentos : 
     - Firebase
     - Iot , Atmega, ESP32, ESP8266
     - Electronica Digital
@@ -238,7 +256,6 @@ class _SideMenuState extends State<SideMenu> {
           Rect.fromLTWH(30, 400, pageSize.width - (30), pageSize.height - 120),
     )!;
 
-
     //Generate PDF grid.
 
     //Save the PDF document
@@ -246,6 +263,11 @@ class _SideMenuState extends State<SideMenu> {
     //Dispose the document.
     document.dispose();
     //Save and launch the file.
-    await saveAndLaunchFile(bytes, 'cv.pdf');
+    await saveAndLaunchFile(bytes, 'AlejandroHerediaCV.pdf');
+  }
+
+  Future<Uint8List> _readImage() async {
+    final data = await rootBundle.load('assets/images/ale_small.png');
+    return data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
   }
 }
